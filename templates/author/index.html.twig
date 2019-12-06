@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+    <div class="card-columns">
+        {% for author in authors %}
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src='/images/author.png' alt="book">
+                <div class="card-body">
+                    <p><a href="{{ path('author_edit', {'slug': author.slug}) }}"><button type="button" class="btn btn-primary">Редактировать</button></a></p>
+                    <p><a href="{{ path('author_show', {'slug': author.slug}) }}">{{ author.name }} </a></p>
+                    <p><a href="{{ path('author_delete', {'slug': author.slug}) }}"><button type="button" class="btn btn-danger">Удалить</button></a></p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

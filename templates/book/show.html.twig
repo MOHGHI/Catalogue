@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <p>Title: </p>
+    <li class="list-group-item">
+        {{ book.title }}
+    </li>
+    <p>Authors: </p>
+    {% for author in authors %}
+        <li class="list-group-item">
+             {{ author.getName }}
+        </li>
+    {% endfor %}
+{% endblock %}

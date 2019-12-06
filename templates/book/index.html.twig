@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+    <div class="container text-center">
+        <h1>My Catalogue</h1>
+    </div>
+    <div class="card-columns">
+    {% for book in books %}
+        <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src='/images/book.png' alt="book">
+        <div class="card-body">
+            <p><a href="{{ path('book_edit', {'slug': book.slug}) }}"><button type="button" class="btn btn-primary">Редактировать</button></a></p>
+            <p><a href="{{ path('book_show', {'slug': book.slug}) }}">{{ book.title }} </a></p>
+            <p><a href="{{ path('book_delete', {'slug': book.slug}) }}"><button type="button" class="btn btn-danger">Удалить</button></a></p>
+        </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+    <div class="container text-center">
+        <h1>My Catalogue</h1>
+    </div>
+    <div class="card-columns">
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src='/images/book.png' alt="book">
+                <div class="card-body">
+                    <p><a href="{{ path('books') }}"><button type="button" class="btn btn-primary">Книги</button></a></p>
+                </div>
+            </div>
+    </div>
+    <div class="card-columns">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src='/images/author.png' alt="book">
+            <div class="card-body">
+                <p><a href="{{ path('authors') }}"><button type="button" class="btn btn-primary">Авторы</button></a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

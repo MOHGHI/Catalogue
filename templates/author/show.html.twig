@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <p>Name: </p>
+    <li class="list-group-item">
+        {{ author.name }}
+    </li>
+<p>Middle Name: </p>
+<li class="list-group-item">
+    {{ author.middlename }}
+</li>
+<p>Last Name: </p>
+<li class="list-group-item">
+    {{ author.lastname }}
+</li>
+
+{% endblock %}
